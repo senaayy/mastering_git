@@ -46,6 +46,27 @@ const iconKeywords = [
     { keyword: ['bahçe', 'bitki', 'çiçek', 'ağaç', 'sulama'], icon: '🌱' },
     { keyword: ['tamir', 'onarım', 'fiksle'], icon: '🔧' },
     { keyword: ['yazılım', 'kod', 'program', 'bilgisayar'], icon: '💻' }
+    { keyword: ['fotoğraf', 'çek', 'kamera', 'foto'], icon: '📷' },
+{ keyword: ['resim', 'boya', 'çiz', 'sanat'], icon: '🎨' },
+{ keyword: ['parti', 'kutlama', 'doğum günü', 'eğlence'], icon: '🥳' },
+{ keyword: ['alışkanlık', 'gelişim', 'hedef', 'başarı'], icon: '🚀' },
+{ keyword: ['hava', 'yağmur', 'güneş', 'kar'], icon: '☀️' },
+{ keyword: ['yazı', 'makale', 'blog', 'not'], icon: '🖋️' },
+{ keyword: ['moda', 'kıyafet', 'stil', 'giyim'], icon: '👗' },
+{ keyword: ['aksesuar', 'takı', 'saat', 'gözlük'], icon: '💎' },
+{ keyword: ['yardım', 'destek', 'yardımlaşma'], icon: '🤝' },
+{ keyword: ['hobi', 'boş zaman', 'uğraş', 'zevk'], icon: '🎯' },
+{ keyword: ['motivasyon', 'ilham', 'enerji', 'güç'], icon: '⚡' },
+{ keyword: ['araba', 'araç', 'sürüş', 'otopark'], icon: '🚗' },
+{ keyword: ['yemek siparişi', 'paket servis', 'getir', 'yemeksepeti'], icon: '🍔' },
+{ keyword: ['dondurma', 'tatlı', 'pasta', 'çikolata'], icon: '🍰' },
+{ keyword: ['spor salonu', 'ağırlık', 'antrenman', 'gym'], icon: '🏋️' },
+{ keyword: ['okyanus', 'deniz', 'plaj', 'yüzme'], icon: '🏖️' },
+{ keyword: ['müze', 'sergi', 'galeri', 'sanat etkinliği'], icon: '🏛️' },
+{ keyword: ['doğa', 'kamp', 'orman', 'dağ'], icon: '🏕️' },
+{ keyword: ['rüya', 'hayal', 'dilek', 'umut'], icon: '🌟' },
+{ keyword: ['tatlı hayvanlar', 'minik', 'sevimli', 'pati'], icon: '🐶' }
+
 ];
 
 // Varsayılan ikon
