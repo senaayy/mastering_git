@@ -5,52 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo Uygulaması</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Todo Uygulaması</h1>
-        
-        <!-- Gün seçme sekmeleri -->
-        <div class="days-tabs">
-            <button class="day-tab active" data-day="pazartesi">Pazartesi</button>
-            <button class="day-tab" data-day="sali">Salı</button>
-            <button class="day-tab" data-day="carsamba">Çarşamba</button>
-            <button class="day-tab" data-day="persembe">Perşembe</button>
-            <button class="day-tab" data-day="cuma">Cuma</button>
-            <button class="day-tab" data-day="cumartesi">Cumartesi</button>
-            <button class="day-tab" data-day="pazar">Pazar</button>
-        </div>
-        
-        <div class="todo-form">
-            <input type="text" id="todo-input" placeholder="Yapılacak görevi yazın...">
-            <button id="add-button">Ekle</button>
-        </div>
-        
-        <div class="timer-form">
-            <div class="timer-inputs">
-                <input type="time" id="start-time" placeholder="Başlangıç">
-                <span>-</span>
-                <input type="time" id="end-time" placeholder="Bitiş">
+    <!-- Motive Edici Giriş Ekranı -->
+    <div class="welcome-screen" id="welcome-screen">
+        <div class="welcome-content animate__animated animate__fadeIn">
+            <h1 class="welcome-title">Hoş Geldiniz!</h1>
+            <div class="welcome-icon">🦋</div>
+            <p class="welcome-message">Bugün neler başaracaksın?</p>
+            <p class="welcome-quote">"Küçük adımlar, büyük değişimlere yol açar."</p>
+            <div class="motivation-icons">
+                <!-- İkonlar JavaScript ile eklenecek -->
             </div>
-            <button id="add-timer-button" class="purple-btn">Zamanlayıcı Ekle</button>
-        </div>
-        
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">Tümü</button>
-            <button class="filter-btn" data-filter="active">Aktif</button>
-            <button class="filter-btn" data-filter="completed">Tamamlanan</button>
-        </div>
-        
-        <ul id="todo-list">
-            <!-- Todo öğeleri JavaScript ile eklenecek -->
-        </ul>
-        
-        <div class="todo-footer">
-            <span id="todo-count">0 görev kaldı</span>
-            <button id="clear-completed">Tamamlananları Temizle</button>
+            <button id="start-button" class="start-button">Başla</button>
         </div>
     </div>
     
+    <div class="container">
+        <!-- Ana Uygulama İçeriği -->
+        <div class="app-content" id="app-content" style="display: none;">
+            <h1>Todo Uygulaması</h1>
+            
+            <!-- Gün seçme sekmeleri -->
+            <div class="days-tabs">
+                <button class="day-tab active" data-day="pazartesi">Pazartesi</button>
+                <button class="day-tab" data-day="sali">Salı</button>
+                <button class="day-tab" data-day="carsamba">Çarşamba</button>
+                <button class="day-tab" data-day="persembe">Perşembe</button>
+                <button class="day-tab" data-day="cuma">Cuma</button>
+                <button class="day-tab" data-day="cumartesi">Cumartesi</button>
+                <button class="day-tab" data-day="pazar">Pazar</button>
+            </div>
+            
+            <div class="todo-form">
+                <input type="text" id="todo-input" placeholder="Yapılacak görevi yazın...">
+                <button id="add-button">Ekle</button>
+            </div>
+            
+            <div class="timer-form">
+                <div class="timer-inputs">
+                    <input type="time" id="start-time" placeholder="Başlangıç">
+                    <span>-</span>
+                    <input type="time" id="end-time" placeholder="Bitiş">
+                </div>
+                <button id="add-timer-button" class="purple-btn">Zamanlayıcı Ekle</button>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="active">Aktif</button>
+                <button class="filter-btn" data-filter="completed">Tamamlanan</button>
+            </div>
+            
+            <ul id="todo-list">
+                <!-- Todo öğeleri JavaScript ile eklenecek -->
+            </ul>
+            
+            <div class="todo-footer">
+                <span id="todo-count">0 görev kaldı</span>
+                <button id="clear-completed">Tamamlananları Temizle</button>
+            </div>
+            <!-- Dashboard: Haftalık İzleme Grafikleri -->
+            <div class="dashboard">
+                <h2>Haftalık Görev Dağılımı</h2>
+                <canvas id="weekly-tasks-stacked" width="400" height="200"></canvas>
+                <h2>Haftalık Tamamlanma Oranı</h2>
+                <canvas id="weekly-completion-line" width="400" height="200"></canvas>
+                <h2>Haftalık Toplam Görev Sayısı</h2>
+                <canvas id="weekly-total-bar" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 
